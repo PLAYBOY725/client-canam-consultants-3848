@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canam Consultants | Study Abroad & Visa Experts in Chandigarh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        brand: { 500: '#1d4ed8', 600: '#1e40af', 900: '#1e3a8a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+    </style>
+</head>
+<body class="text-slate-900 bg-slate-50">
+
+    <!-- Top Bar -->
+    <div class="bg-blue-900 text-white py-2 text-sm text-center">
+        <span class="font-medium">Rated 4.9★ by 120+ students on Google.</span>
+        <a href="#contact" class="ml-4 underline hover:text-blue-200">Book your free profile assessment today!</a>
+    </div>
+
+    <!-- Header -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold font-heading text-blue-900">CANAM<span class="text-blue-600">.</span></div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#services" class="hover:text-blue-600">Services</a>
+                <a href="#why" class="hover:text-blue-600">Why Us</a>
+                <a href="#faq" class="hover:text-blue-600">FAQ</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+911725050666" class="hidden md:block font-semibold text-blue-900">+91 172 505 0666</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-semibold">Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="gradient-bg text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full mb-6">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="text-sm font-medium">Trusted by 120+ Students</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold font-heading leading-tight mb-6">Your Global Education Journey Starts in Chandigarh.</h1>
+                <p class="text-lg opacity-90 mb-8 max-w-lg">Expert visa guidance, university selection, and end-to-end support for your international study dreams.</p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition">Get Started</a>
+                    <a href="https://wa.me/911725050666?text=Hello%20Canam%20Consultants,%20I%20want%20to%20inquire%20about%20your%20services." class="border border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-md border border-white/20">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 p-6 rounded-2xl">
+                        <h3 class="text-3xl font-bold">98%</h3>
+                        <p class="text-sm opacity-80">Visa Success Rate</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl">
+                        <h3 class="text-3xl font-bold">15+</h3>
+                        <p class="text-sm opacity-80">Partner Countries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-heading font-bold text-center mb-16">Signature Services</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[ {title: "Strategic Consultation", desc: "Tailored roadmap for your profile."}, {title: "Turnaround Package", desc: "Fast-track application processing."}, {title: "Enterprise Care", desc: "End-to-end visa documentation."}, {title: "VIP 24/7 Support", desc: "Direct access to lead counselors."} ].map(s => (
+                <div class="p-8 bg-white border border-slate-200 rounded-3xl hover:shadow-xl transition">
+                    <h3 class="text-xl font-bold mb-3">{s.title}</h3>
+                    <p class="text-slate-600 mb-6">{s.desc}</p>
+                    <a href="#contact" class="text-blue-600 font-semibold hover:underline">Inquire Now →</a>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Contact / Booking Form -->
+    <section id="contact" class="py-20 bg-slate-100 px-6">
+        <div class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-2">Book Your Consultation</h2>
+            <p class="text-slate-600 mb-8">Fill in your details and our team will reach out within 2 hours.</p>
+            <div id="formFeedback" class="hidden mb-6 p-4 bg-green-50 text-green-700 rounded-xl font-medium">Thank you! Your request has been received. We will contact you shortly.</div>
+            <form id="bookingForm" class="space-y-4">
+                <input type="text" placeholder="Full Name" required class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-blue-600">
+                <input type="tel" placeholder="Phone Number" required class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-blue-600">
+                <select class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <option>Select Preferred Country</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>UK</option>
+                    <option>USA</option>
+                </select>
+                <button class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold hover:bg-black transition">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-bold text-lg mb-4">Canam Consultants</h4>
+                <p class="text-blue-200">Sector 17-C, Chandigarh</p>
+                <p class="text-blue-200 mt-2">contact@canamconsultants.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-blue-200">
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="tel:+911725050666">Call: +91 172 505 0666</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Working Hours</h4>
+                <p class="text-blue-200">Mon - Sat: 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-center text-blue-300 text-sm">
+            &copy; 2024 Canam Consultants. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        const form = document.getElementById('bookingForm');
+        const feedback = document.getElementById('formFeedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.style.display = 'none';
+            feedback.classList.remove('hidden');
+        });
+
+        // Simple Mobile Nav toggle logic would go here
+    </script>
+</body>
+</html>
